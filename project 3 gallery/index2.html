@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery with Hover Effects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(133deg,rgb(203, 202, 202),white);
+        }
+
+        .outer-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #020202;
+            color: white;
+            text-align: center;
+    padding: 20px;
+            font-family: 'Lobster', cursive;
+            font-size: 2.5rem;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+        justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: auto;
+      border-radius: 10px;
+            overflow: hidden;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            
+            display: block;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+         color: white;
+            transform: translateY(100%);
+  transition: transform 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+    .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover .card-content {
+            transform: translateY(0);
+        }
+
+    .card-content h3 {
+            margin: 0;
+        font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .card-content p {
+        margin: 10px 0 0;
+            font-size: 0.9rem;
+        font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+            width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <header class="header">Photo Gallery <i class="fa-regular fa-images"></i></header>
+        <div class="main-container">
+            <div class="container">
+                <div class="card">
+                    <img src="images/pic1.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic2.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic3.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic4.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic5.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic6.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic7.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic8.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic9.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic10.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic11.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic12.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic13.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic14.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic15.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic16.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div><div class="card">
+                    <img src="images/pic17.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic18.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic19.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div><div class="card">
+                    <img src="images/pic20.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic21.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic22.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic23.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic24.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic25.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic26.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic27.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic28.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic29.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic30.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic31.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic32.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic33.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic34.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic35.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic36.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic37.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic38.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic39.avif" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pic3.jpg" >
+                    <div class="card-content">
+                        <h3>Image</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
